@@ -332,6 +332,46 @@ main,
 }
 
 /* ==========================================
+   ANNOUNCEMENT
+========================================== */
+.announcement {
+    max-width: 700px;
+    margin: 4rem auto 0;
+    text-align: center;
+}
+.announcement p {
+    max-width: 620px;
+    margin: 0 auto 1.5rem;
+}
+.announcement strong {
+    color: var(--text);
+}
+.book-cover {
+    display: block;
+    width: min(100%, 280px);
+    height: auto;
+    margin: 0 auto 2rem;
+    border-radius: var(--radius);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+    transition: var(--transition);
+}
+.book-cover:hover {
+    transform: translateY(-4px);
+}
+.donate-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+.donate-links .open-button {
+    min-width: 170px;
+}
+
+/* ==========================================
    SPACING UTILITIES
 ========================================== */
 
@@ -1081,6 +1121,21 @@ footer p:last-child {
 
         margin-bottom: 1.5rem;
 
+    }
+    
+        .announcement {
+        margin-top: 3rem;
+    }
+    .book-cover {
+        width: min(100%, 220px);
+    }
+    .donate-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .donate-links .open-button {
+        width: 100%;
+        max-width: 260px;
     }
 
 }
