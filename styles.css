@@ -1,0 +1,1529 @@
+/*
+================================================
+
+A FOUNDATION BEFORE THE SHOUT
+
+Global Stylesheet
+
+Author: Bradley Hobbs
+
+Version: 1.0
+
+================================================
+*/
+
+/* ==========================================
+   ROOT
+========================================== */
+
+:root {
+
+    --background: #12171C;
+
+    --surface: #1B2026;
+
+    --text: #F5F1E9;
+
+    --muted: #C9B99A;
+
+    --accent: #B78642;
+
+    --border: rgba(183, 134, 66, .20);
+
+    --footer: #8A847B;
+
+    --page-width: 760px;
+
+    --hero-width: 1600px;
+
+    --transition: .30s ease;
+
+    --radius: 8px;
+
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    -webkit-text-size-adjust: 100%;
+
+}
+
+body {
+
+    min-height: 100vh;
+
+}
+
+/* ==========================================
+   BASE TYPOGRAPHY
+========================================== */
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Source Serif 4", serif;
+
+    font-size: clamp(1rem, .95rem + .25vw, 1.15rem);
+
+    line-height: 1.9;
+
+    font-weight: 400;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-weight: 400;
+
+    letter-spacing: .06em;
+
+    line-height: 1.2;
+
+}
+
+h1 {
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+
+}
+
+h2 {
+
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+
+}
+
+h3 {
+
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+
+}
+
+/* ==========================================
+   PARAGRAPHS
+========================================== */
+
+p {
+
+    margin-bottom: 1.75rem;
+
+    color: var(--text);
+
+}
+
+strong {
+
+    font-weight: 600;
+
+}
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+/* ==========================================
+   HERO BANNER
+========================================== */
+
+header {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.hero-banner {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: var(--hero-width);
+
+    height: auto;
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+a:hover {
+
+    color: var(--accent);
+
+}
+
+a:focus-visible {
+
+    outline: 2px solid var(--accent);
+
+    outline-offset: 4px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.open-button {
+
+    display: inline-block;
+
+    padding: 1rem 3rem;
+
+    border: 1px solid var(--accent);
+
+    border-radius: var(--radius);
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: .95rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    transition: var(--transition);
+
+}
+
+.open-button:hover {
+
+    background: var(--accent);
+
+    color: var(--background);
+
+}
+
+.open-button:focus-visible {
+
+    outline: 2px solid var(--accent);
+
+    outline-offset: 4px;
+
+}
+
+/* ==========================================
+   GLOBAL CONTAINERS
+========================================== */
+
+main,
+
+.reading-page,
+
+.contents-container {
+
+    width: min(92%, var(--page-width));
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   LANDING PAGE
+========================================== */
+
+.landing {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 5rem 0 6rem;
+
+}
+
+.welcome {
+
+    max-width: 700px;
+
+    margin-bottom: 3rem;
+
+}
+
+.welcome .intro {
+
+    color: var(--muted);
+
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+    margin-bottom: 2rem;
+
+}
+
+.welcome p {
+
+    max-width: 650px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+/* ==========================================
+   SPACING UTILITIES
+========================================== */
+
+.section {
+
+    padding: 4rem 0;
+
+}
+
+.center {
+
+    text-align: center;
+
+}
+
+.text-muted {
+
+    color: var(--muted);
+
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.page-header {
+
+    width: 100%;
+
+    padding: 2rem 1.5rem;
+
+}
+
+.page-header nav {
+
+    width: min(92%, var(--page-width));
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.page-header nav a {
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    transition: var(--transition);
+
+}
+
+.page-header nav a:hover {
+
+    color: var(--text);
+
+}
+
+/* ==========================================
+   CONTENTS PAGE
+========================================== */
+
+.contents-container {
+
+    padding: 3rem 0 6rem;
+
+}
+
+.contents-container h1 {
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+
+}
+
+.contents-intro {
+
+    max-width: 500px;
+
+    margin: 0 auto 4rem;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-style: italic;
+
+    line-height: 2;
+
+}
+
+/* ==========================================
+   CONTENT GROUPS
+========================================== */
+
+.contents-section {
+
+    margin-bottom: 4rem;
+
+}
+
+.contents-section h2 {
+
+    color: var(--text);
+
+    margin-bottom: 1.5rem;
+
+    letter-spacing: .08em;
+
+    border-bottom: 1px solid var(--border);
+
+    padding-bottom: .75rem;
+
+}
+
+/* ==========================================
+   CONTENT LINKS
+========================================== */
+
+.contents-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1rem 0;
+
+    color: var(--muted);
+
+    border-bottom: 1px solid rgba(255,255,255,.04);
+
+    transition: var(--transition);
+
+}
+
+.contents-card:hover {
+
+    color: var(--text);
+
+    padding-left: .75rem;
+
+}
+
+.contents-card span:first-child {
+
+    flex: 1;
+
+}
+
+.contents-card span:last-child {
+
+    color: var(--accent);
+
+    font-size: 1.1rem;
+
+    transition: var(--transition);
+
+}
+
+.contents-card:hover span:last-child {
+
+    transform: translateX(6px);
+
+}
+
+/* ==========================================
+   PROGRESS INDICATOR
+========================================== */
+
+.progress {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: .5rem;
+
+    margin: 0 auto 2.5rem;
+
+    color: var(--accent);
+
+    font-size: .8rem;
+
+    letter-spacing: .25rem;
+
+    opacity: .9;
+
+}
+
+/* ==========================================
+   DIVIDERS
+========================================== */
+
+.page-divider {
+
+    width: 140px;
+
+    height: 1px;
+
+    background: var(--accent);
+
+    opacity: .35;
+
+    margin: 3rem auto;
+
+}
+
+/* ==========================================
+   DECORATIVE SEPARATOR
+========================================== */
+
+.separator {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 3rem auto;
+
+    color: var(--accent);
+
+    opacity: .5;
+
+    letter-spacing: .4rem;
+
+    font-size: .85rem;
+
+}
+
+/* ==========================================
+   SIMPLE LIST SUPPORT
+========================================== */
+
+.contents-list {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.contents-list li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+/* ==========================================
+   SUBTLE HOVER EFFECTS
+========================================== */
+
+.contents-card:hover,
+
+.page-header nav a:hover {
+
+    transition: .25s ease;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .page-header {
+
+        padding: 1.5rem;
+
+    }
+
+    .contents-container {
+
+        padding-top: 2rem;
+
+    }
+
+    .contents-section {
+
+        margin-bottom: 3rem;
+
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .contents-card {
+
+        padding: .9rem 0;
+
+    }
+
+    .contents-intro {
+
+        margin-bottom: 3rem;
+
+    }
+
+    .page-header nav {
+
+        font-size: .85rem;
+
+    }
+
+}
+
+
+/* ==========================================
+   READING PAGES
+========================================== */
+
+.reading-page {
+
+    width: min(92%, var(--page-width));
+
+    margin: 0 auto;
+
+    padding: 2rem 0 6rem;
+
+}
+
+/* ==========================================
+   CHAPTER TITLES
+========================================== */
+
+.reading-page h1 {
+
+    text-align: center;
+
+    margin-bottom: .5rem;
+
+    color: var(--text);
+
+}
+
+.chapter-subtitle {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-style: italic;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    margin-bottom: 2.5rem;
+
+}
+
+/* ==========================================
+   BOOK CONTENT
+========================================== */
+
+.book-content {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+}
+
+.book-content p {
+
+    margin-bottom: 1.8rem;
+
+    text-align: left;
+
+    text-wrap: pretty;
+
+    hyphens: auto;
+
+}
+
+.book-content strong {
+
+    color: var(--text);
+
+    font-weight: 600;
+
+}
+
+/* ==========================================
+   READING RHYTHM
+========================================== */
+
+.book-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.book-content blockquote {
+
+    margin: 2.5rem 0;
+
+    padding-left: 1.5rem;
+
+    border-left: 2px solid var(--accent);
+
+    color: var(--muted);
+
+    font-style: italic;
+
+}
+
+/* ==========================================
+   DEDICATION PAGE
+========================================== */
+
+.dedication {
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.dedication p {
+
+    margin-bottom: 2rem;
+
+}
+
+/* ==========================================
+   PRAYER PAGES
+========================================== */
+
+.prayer {
+
+    max-width: 680px;
+
+    margin: 0 auto;
+
+}
+
+.prayer p:first-child {
+
+    font-weight: 600;
+
+    color: var(--muted);
+
+}
+
+.prayer p:last-child {
+
+    text-align: center;
+
+    margin-top: 3rem;
+
+    font-style: italic;
+
+}
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.introduction {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   AUTHOR PAGE
+========================================== */
+
+.author {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.author-image {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 2rem;
+
+    border: 2px solid var(--border);
+
+    object-fit: cover;
+
+}
+
+.author h2 {
+
+    margin-bottom: 1rem;
+
+}
+
+.author p {
+
+    max-width: 650px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+/* ==========================================
+   PAGE NAVIGATION
+========================================== */
+
+.page-navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 5rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--border);
+
+}
+
+.page-navigation a {
+
+    color: var(--muted);
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+    font-size: .9rem;
+
+}
+
+.page-navigation a:hover {
+
+    color: var(--text);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 4rem 2rem;
+
+    border-top: 1px solid rgba(255,255,255,.05);
+
+}
+
+footer p:first-child {
+
+    color: var(--muted);
+
+    font-style: italic;
+
+    margin-bottom: 1rem;
+
+}
+
+footer p:last-child {
+
+    color: var(--footer);
+
+    font-size: .9rem;
+
+    margin-bottom: 0;
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection {
+
+    background: var(--accent);
+
+    color: var(--background);
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: rgba(183,134,66,.35);
+
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(183,134,66,.60);
+
+}
+
+/* ==========================================
+   FADE IN
+========================================== */
+
+.reading-page,
+.contents-container,
+.landing {
+
+    animation: fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .book-content {
+
+        max-width: 100%;
+
+    }
+
+    .page-navigation {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 1.5rem;
+
+    }
+
+    .author-image {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .reading-page {
+
+        padding-top: 1rem;
+
+        padding-bottom: 4rem;
+
+    }
+
+    .chapter-subtitle {
+
+        margin-bottom: 2rem;
+
+    }
+
+    .book-content p {
+
+        margin-bottom: 1.5rem;
+
+    }
+
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+:focus-visible {
+
+    outline: 2px solid var(--accent);
+
+    outline-offset: 4px;
+
+}
+
+html:focus-within {
+
+    scroll-behavior: smooth;
+
+}
+
+button,
+a {
+
+    min-height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+    body {
+
+        background: #ffffff;
+
+        color: #000000;
+
+        font-size: 12pt;
+
+        line-height: 1.6;
+
+    }
+
+    header,
+    footer,
+    .page-navigation,
+    .progress {
+
+        display: none;
+
+    }
+
+    .reading-page,
+    .book-content {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+    }
+
+    a {
+
+        color: #000000;
+
+        text-decoration: none;
+
+    }
+
+}
+
+/* ==========================================
+   LARGE DESKTOPS
+========================================== */
+
+@media (min-width: 1400px) {
+
+    :root {
+
+        --page-width: 820px;
+
+    }
+
+}
+
+/* ==========================================
+   ULTRAWIDE DISPLAYS
+========================================== */
+
+@media (min-width: 1800px) {
+
+    :root {
+
+        --page-width: 860px;
+
+    }
+
+}
+
+/* ==========================================
+   LANDSCAPE PHONES
+========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .landing {
+
+        padding: 3rem 0;
+
+    }
+
+}
+
+/* ==========================================
+   LISTS
+========================================== */
+
+ul,
+ol {
+
+    margin: 0 0 2rem 1.5rem;
+
+}
+
+li {
+
+    margin-bottom: .75rem;
+
+}
+
+/* ==========================================
+   TABLES
+========================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 2rem 0;
+
+}
+
+th,
+td {
+
+    padding: 1rem;
+
+    border-bottom: 1px solid var(--border);
+
+    text-align: left;
+
+}
+
+th {
+
+    color: var(--muted);
+
+}
+
+/* ==========================================
+   CODE
+========================================== */
+
+code {
+
+    background: rgba(255,255,255,.05);
+
+    padding: .15rem .4rem;
+
+    border-radius: 4px;
+
+    font-size: .95em;
+
+}
+
+pre {
+
+    overflow-x: auto;
+
+}
+
+/* ==========================================
+   HR
+========================================== */
+
+hr {
+
+    border: 0;
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin: 3rem auto;
+
+}
+
+/* ==========================================
+   UTILITY CLASSES
+========================================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.text-left {
+
+    text-align: left;
+
+}
+
+.text-right {
+
+    text-align: right;
+
+}
+
+.mt-1 {
+
+    margin-top: 1rem;
+
+}
+
+.mt-2 {
+
+    margin-top: 2rem;
+
+}
+
+.mt-3 {
+
+    margin-top: 3rem;
+
+}
+
+.mb-1 {
+
+    margin-bottom: 1rem;
+
+}
+
+.mb-2 {
+
+    margin-bottom: 2rem;
+
+}
+
+.mb-3 {
+
+    margin-bottom: 3rem;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+.rounded {
+
+    border-radius: var(--radius);
+
+}
+
+/* ==========================================
+   BOOK LAYOUT ENHANCEMENTS
+========================================== */
+
+.book-content {
+
+    position: relative;
+
+}
+
+.book-content::before {
+
+    content: "";
+
+    display: block;
+
+    width: 48px;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    opacity: .30;
+
+    margin: 0 auto 3rem;
+
+}
+
+.book-content::after {
+
+    content: "";
+
+    display: block;
+
+    width: 48px;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    opacity: .30;
+
+    margin: 3rem auto 0;
+
+}
+
+/* ==========================================
+   SUBTLE PAGE EFFECT
+========================================== */
+
+.reading-page {
+
+    position: relative;
+
+}
+
+.reading-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(255,255,255,.015),
+    transparent 60%);
+
+}
+
+/* ==========================================
+   FOOTER LINKS
+========================================== */
+
+footer a {
+
+    color: var(--muted);
+
+}
+
+footer a:hover {
+
+    color: var(--text);
+
+}
+
+/* ==========================================
+   HERO ENHANCEMENT
+========================================== */
+
+.hero-banner {
+
+    box-shadow:
+
+    0 8px 40px rgba(0,0,0,.25);
+
+}
+
+/* ==========================================
+   IMAGE SUPPORT
+========================================== */
+
+figure {
+
+    margin: 3rem 0;
+
+}
+
+figcaption {
+
+    margin-top: 1rem;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: .9rem;
+
+}
+
+/* ==========================================
+   FINAL POLISH
+========================================== */
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+::selection {
+
+    background: var(--accent);
+
+    color: var(--background);
+
+}
+
+html {
+
+    background: var(--background);
+
+}
